@@ -76,15 +76,15 @@
 		<if_sid>60103</if_sid>
 		<field name="win.system.eventID">^4656$</field>
 		<options>no_full_log</options>
-		<!-- TODO: Add file path in description -->
-		<description>File being accessed!</description>
+		<description>File $(win.eventdata.objectName) being accessed!</description>
 	</rule>
 
 	<rule id="130301" level="1">
 		<if_sid>130300</if_sid>
-		<!-- TODO: Files being modified in System32 -->
+		<field name="win.system.eventID">^4663$</field>
+		<field name="win.eventdata.objectName">C:\\\\Windows\\\\System32</field>
 		<options>no_full_log</options>
-		<description>File being accessed in </description>
+		<description>File being accessed in System32</description>
 	</rule>
 
 	<!-- Process Injection -->
